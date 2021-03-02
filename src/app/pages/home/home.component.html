@@ -1,0 +1,31 @@
+<button type="button" class="btn btn-primary" (click)="openModal()">
+
+
+  Add
+
+</button>
+<p></p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">S.N.</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Create Date</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let item of dataList;let i=index;">
+      <th scope="row">{{i+1}}</th>
+      <td>{{item.title}}</td>
+      <td>{{item.description}}</td>
+      <td> {{ item.created_at | date:'dd-mm-yyyy'}}</td>
+      <td>
+        <button type="button" class="btn btn-success" (click)="editData(item)">Edit</button> &nbsp;
+<button type="button" class="btn btn-danger" (click)="delete(item)">Delete</button>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>

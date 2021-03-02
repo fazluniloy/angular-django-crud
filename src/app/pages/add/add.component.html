@@ -1,0 +1,16 @@
+
+<div class="container" >
+	<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  
+  <div class="form-group">
+    <label for="inputAddress">Title</label>
+    <input type="text" class="form-control" formControlName="title">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Description</label>
+    <input type="text" class="form-control" formControlName="description">
+  </div>
+  
+  <button type="submit" class="btn btn-primary" >Submit</button> &nbsp;<button  class="btn btn-warning" (click)="backList()">Cancel</button>
+</form>
+</div>
